@@ -1,65 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <title> ব্যক্তিগত তথ্যঃ </title>
+    <title>ব্যক্তিগত তথ্যঃ</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* প্রফেশনাল ফন্ট */
             text-align: center;
-            background: #f2f2f2;
+            background: linear-gradient(to right, #1e3c72, #2a5298); /* হালকা ব্লু এবং ডার্ক ব্লু গ্র্যাডিয়েন্ট ব্যাকগ্রাউন্ড */
             padding: 40px;
+            margin: 0;
+            height: 100vh;
+            color: #fff; /* পেজের বেস কালার সাদা */
         }
         .container {
-            background: white;
-            padding: 30px;
-            max-width: 500px;
+            background: rgba(255, 255, 255, 0.95); /* হালকা সাদা ব্যাকগ্রাউন্ড */
+            padding: 40px;
+            max-width: 650px;
             margin: auto;
             border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         img {
             width: 150px;
             border-radius: 50%;
+            border: 4px solid #2a5298; /* ডার্ক ব্লু বর্ডার */
         }
         h1 {
             color: #333;
+            font-size: 32px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
         a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .info {
+            color: #333;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #ffffff; /* সাদা রঙ */
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            border: 2px solid #ffffff; /* সাদা রঙের বর্ডার */
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #aaa;
+        }
+        .footer a {
             color: #0077cc;
             text-decoration: none;
+        }
+        .footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="https://via.placeholder.com/150" alt="প্রোফাইল ছবি">
-        </h1> এনামুল হক </h1>
-        <p>আমি একজন ওয়েব ডেভেলপার।</p>
+        <h1>এনামুল হক</h1>
+        <p>আমি একজন অভিজ্ঞ ওয়েব ডেভেলপার, যিনি আধুনিক ওয়েব প্রযুক্তি ব্যবহার করে উচ্চমানের ডিজাইন এবং উন্নত কার্যকারিতা তৈরি করতে পারদর্শী।</p>
         <p><a href="https://example.com" target="_blank">আমার ওয়েবসাইট</a></p>
+        
+        <div class="info">
+            <p>মোবাইল: +880 123 456 7890</p>
+            <p>ইমেইল: example@example.com</p>
+            <p>আমার সম্পর্কে: আমি একজন প্রফেশনাল ওয়েব ডেভেলপার। আমি সাধারণত ফ্রন্ট-এন্ড এবং ব্যাক-এন্ড প্রযুক্তি নিয়ে কাজ করি এবং আমার লক্ষ্য হচ্ছে ব্যবহারকারীদের জন্য সহজ ও ইন্টারেকটিভ ওয়েবসাইট তৈরি করা।</p>
+        </div>
+    </div>
+
+    <h2>আমার লোকেশন: মুন্সিপাড়া, ক্রোড়গাছা, <br>হরিরামপুর, গোবিন্দগঞ্জ, গাইবান্ধা</h2>
+
+    <div class="footer">
+        <p>ধন্যবাদ!</p>
+        <p>ডেভেলপার: <a href="https://example.com" target="_blank">এনামুল হক</a></p>
     </div>
 </body>
 </html>
-<h2 style="text-align: center; 
-           color: #87CEFA; /* আকাশী রঙ */
-           font-size: 24px; 
-           font-weight: bold; 
-           text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
-           border: 2px solid #87CEFA; /* আকাশী রঙের বর্ডার */
-           padding: 10px; 
-           border-radius: 8px; 
-           display: inline-block;"> 
-    আমার লোকেশন: মুন্সিপাড়া, ক্রোড়গাছা, <br>হরিরামপুর, গোবিন্দগঞ্জ, গাইবান্ধা
-</h2>
-
-<div style="width: 500px; height: 400px; margin: 20px auto; border: 2px solid #666; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.3); overflow: hidden;">
-    <iframe 
-        src="https://www.google.com/maps?q=5FXM+XRM+Krorgachha&hl=bn&z=16&output=embed" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
-</div>
