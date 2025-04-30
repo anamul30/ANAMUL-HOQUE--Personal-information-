@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamul Hoque</title>
+    <meta name="description" content="Personal website of Anamul Hoque.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            line-height: 1.6;
+            background: #fff;
+            color: #333;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .top-bar {
+            background: #f9f9f9;
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .lang-switch {
+            float: right;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #005b8f;
+        }
+        header {
+            background: #ffffff;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        header h1 {
+            text-align: center;
+            color: #005b8f;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 10px 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .hero {
+            background: #005b8f;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .cta-buttons a {
+            display: inline-block;
+            margin: 10px 10px 0;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: #f39c12;
+            color: white;
+        }
+        .btn-secondary {
+            background: white;
+            color: #005b8f;
+            border: 1px solid #005b8f;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 60px 0;
+        }
+        .service-card {
+            background: #f7f7f7;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1 1 300px;
+            max-width: 320px;
+        }
+        .orange { background: #f39c12; color: white; }
+        .blue { background: #3498db; color: white; }
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            padding: 60px 0;
+        }
+        .about-text {
+            flex: 1 1 50%;
+        }
+        .about-image {
+            flex: 1 1 40%;
+        }
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .contact {
+            background: #f4f4f4;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+            .top-bar {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        Call Now: 01943436676 | Email: anamul.bpi30@gmail.com | Address: Kroirgacha, Harirampur, Gobindganj, Gaibandha
+        <a href="index.html" class="lang-switch">BN</a>
+    </div>
+    <header>
+        <div class="container">
+            <h1>ANAMUL HOQUE</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Programs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Key to Success — Education is the Future</h1>
+            <p>Begin your inspirational journey of self-discovery today.</p>
+            <div class="cta-buttons">
+                <a href="#about" class="btn-primary">Learn More</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="container services">
+        <div class="service-card">
+            <h3>Life Coaching</h3>
+            <p>Helping you define and achieve your goals.</p>
+        </div>
+        <div class="service-card orange">
+            <h3>Public Speaking</h3>
+            <p>Build confidence and become a powerful speaker.</p>
+        </div>
+        <div class="service-card blue">
+            <h3>Skill Development</h3>
+            <p>Upgrade your skills for a better career.</p>
+        </div>
+    </section>
+    <section id="about" class="container about">
+        <div class="about-text">
+            <h2>About Anamul Hoque</h2>
+            <p>
+                Anamul Hoque is a forward-thinking youth who believes in developing society through education. He inspires young people through life coaching, public speaking, and skill development programs.
+            </p>
+            <a href="#contact" class="btn-primary">Contact Now</a>
+        </div>
+        <div class="about-image">
+            <img src="demo1.jpg" alt="Anamul Hoque">
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Phone: 01943436676 | Email: anamul.bpi30@gmail.com</p>
+            <p>Address: Kroirgacha, Harirampur, Gobindganj, Gaibandha.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Anamul Hoque. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
