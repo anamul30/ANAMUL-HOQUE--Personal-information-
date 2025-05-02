@@ -1,263 +1,281 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>এনামুল হক</title>
-    <meta name="description" content="এনামুল হকের ব্যক্তিগত ওয়েবসাইট।">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>এনামুল হক</title>
+  <meta name="description" content="এনামুল হকের ব্যক্তিগত ওয়েবসাইট।" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
 
-        body {
-            font-family: 'Hind Siliguri', sans-serif;
-            line-height: 1.6;
-            background: #fff;
-            color: #333;
-        }
+    .top-bar {
+      background: #002244;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      color: #FFD700;
+    }
 
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+    .top-bar a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
 
-        .top-bar {
-            background: #f9f9f9;
-            padding: 10px;
-            font-size: 14px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
+    .lang-switch { font-size: 16px; font-weight: bold; }
 
-        .lang-switch {
-            float: right;
-            margin-right: 20px;
-            text-decoration: none;
-            color: #005b8f;
-        }
+    header {
+      background-image: url('https://i.imgur.com/35XZpkF.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+      color: white;
+    }
 
-        header {
-            background: #ffffff;
-            padding: 20px 0;
-            border-bottom: 1px solid #ddd;
-        }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
 
-        header h1 {
-            text-align: center;
-            color: #005b8f;
-        }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 30px;
+    }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
+    .header-content h1 {
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px black;
+      margin-bottom: 25px;
+      line-height: 1.1; /* Line height কমানো হলো */
+    }
 
-        nav ul li {
-            margin: 10px 15px;
-        }
+    nav {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
 
-        .hero {
-            background: url('images/anamul-hero.jpg') center center/cover no-repeat;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            position: relative;
-        }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+    nav a:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
 
-        .hero > .container {
-            position: relative;
-            z-index: 2;
-        }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
 
-        .cta-buttons a {
-            display: inline-block;
-            margin: 10px 10px 0;
-            padding: 10px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    .hero {
+      background: #005b8f;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      margin-top: 30px; /* Added gap between header and hero */
+    }
 
-        .btn-primary {
-            background: #f39c12;
-            color: white;
-        }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 60px 0;
+    }
 
-        .btn-secondary {
-            background: white;
-            color: #005b8f;
-            border: 1px solid #005b8f;
-        }
+    .service-card {
+      background: #f7f7f7;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      flex: 1 1 300px;
+      max-width: 320px;
+    }
 
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 60px 0;
-        }
+    .orange { background: #f39c12; color: white; }
+    .blue { background: #3498db; color: white; }
 
-        .service-card {
-            background: #f7f7f7;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            flex: 1 1 300px;
-            max-width: 320px;
-        }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      padding: 60px 0;
+    }
 
-        .orange { background: #f39c12; color: white; }
-        .blue { background: #3498db; color: white; }
+    .about-text { flex: 1 1 50%; }
+    .about-image { flex: 1 1 40%; }
+    .about-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
 
-        .about {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-            padding: 60px 0;
-        }
+    .contact {
+      background: #002244;
+      color: #FFD700;
+      padding: 50px 0;
+      text-align: center;
+    }
 
-        .about-text {
-            flex: 1 1 50%;
-        }
+    .contact a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .about-image {
-            flex: 1 1 40%;
-        }
+    .footer {
+      background: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
+    .social-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
 
-        .contact {
-            background: #f4f4f4;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .footer {
-            background: #222;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        @media (max-width: 768px) {
-            .about {
-                flex-direction: column;
-            }
-            .top-bar {
-                font-size: 12px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .about { flex-direction: column; }
+      .top-bar { font-size: 12px; }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        Call Now: ০১৯৪৩৪৩৬৬৭৬ | Email: anamul.bpi30@gmail.com | Address: ক্রোড়গাছা, হরিরামপুর, গোবিন্দগঞ্জ গাইবান্ধা
-        <a href="index-en.html" class="lang-switch">EN</a>
+  <div class="top-bar">
+    <a href="tel:01943436676"> ফোন করুনঃ ০১৯৪৩৪৩৬৬৭৬</a> |
+    <a href="mailto:anamul.bpi30@gmail.com">ইমেইলঃ anamul.bpi30@gmail.com</a> |
+    <a href="https://www.google.com/maps?q=ক্রোড়গাছা,+হরিরামপুর,+গোবিন্দগঞ্জ,+গাইবান্ধা" target="_blank">ঠিকানা: ক্রোড়গাছা, হরিরামপুর, গোবিন্দগঞ্জ গাইবান্ধা। </a>
+    <a href="index-en.html" class="lang-switch">EN</a>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <h1>ANAMUL HOQUE</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">হোম</a></li>
+          <li><a href="#about">আমার সম্পর্কে</a></li>
+          <li><a href="#services">প্রোগ্রাম</a></li>
+          <li><a href="#contact">যোগাযোগ</a></li>
+          <li><a href="#blog">আমার পড়াশোনা</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <header>
-        <div class="container">
-            <h1>ANAMUL HOQUE</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">হোম</a></li>
-                    <li><a href="#about">আমার সম্পর্কে</a></li>
-                    <li><a href="#services">প্রোগ্রাম</a></li>
-                    <li><a href="#contact">যোগাযোগ</a></li>
-                    <li><a href="#blog">ব্লগ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>"সবর করো, নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সঙ্গে আছেন।"
+— (সুরা বাকারা ১৫৩).</h1>
+      <p>"এবং আমার সফলতা শুধুমাত্র আল্লাহর সাহায্যেই সম্ভব।"
+— (সূরা হুদ, ১১:৮৮).</p>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>সফলতার চাবিকাঠি — শিক্ষাই ভবিষ্যৎ</h1>
-            <p>নিজেকে আবিষ্কারের অনুপ্রেরণামূলক যাত্রা শুরু হোক আজ থেকেই।</p>
-            <div class="cta-buttons">
-                <a href="#about" class="btn-primary">আরও জানুন</a>
-                <a href="#contact" class="btn-secondary">যোগাযোগ করুন</a>
-            </div>
-        </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="services" class="container services">
-        <div class="service-card">
-            <h3>লাইফ কোচিং</h3>
-            <p>নিজের লক্ষ্য নির্ধারণ ও বাস্তবায়নে সহায়তা।</p>
-        </div>
-        <div class="service-card orange">
-            <h3>পাবলিক স্পিকিং</h3>
-            <p>আত্মবিশ্বাসে বলিষ্ঠ বক্তা হিসেবে নিজেকে গড়ে তোলা।</p>
-        </div>
-        <div class="service-card blue">
-            <h3>স্কিল ডেভেলপমেন্ট</h3>
-            <p>আধুনিক দক্ষতা অর্জনের মাধ্যমে ক্যারিয়ার গঠন।</p>
-        </div>
-    </section>
+  <section id="services" class="container services">
+    <div class="service-card">
+      <h3>যতটা পরিশ্রম</h3>
+      <p>''ততটাই সুন্দর পরিণতি।''</p>
+    </div>
+    <div class="service-card orange">
+      <h3>তুমি পৃথিবীতে যেই পরিবর্তন দেখতে চাও,</h3>
+      <p>সেই পরিবর্তনটা আগে নিজে হও।</p>
+    </div>
+    <div class="service-card blue">
+      <h3>জীবন কঠিন,</h3>
+      <p>"কিন্তু সাহসী মানুষই সফল হয়।"</p>
+    </div>
+  </section>
 
-    <section id="about" class="container about">
-        <div class="about-text">
-            <h2>কিছু কথা এনামুল হক সম্পর্কে</h2>
-            <p>
-                এনামুল হক একজন প্রগতিশীল যুবক যিনি শিক্ষার মাধ্যমে সমাজ উন্নয়নে বিশ্বাসী। তিনি লাইফ কোচিং, পাবলিক স্পিকিং ও দক্ষতা উন্নয়নের বিভিন্ন প্রোগ্রামের মাধ্যমে তরুণদের প্রেরণা যোগান।
-            </p>
-            <a href="#contact" class="btn-primary">যোগাযোগ করুন</a>
-        </div>
-        <div class="about-image">
-            <img src="demo1.jpg" alt="এনামুল হকের ছবি">
-        </div>
-    </section>
+  <section id="about" class="container about">
+    <div class="about-image" style="text-align:center; margin-bottom: 10px;">
+      <img src="https://i.imgur.com/51nNDDi.jpeg" alt="এনামুল হকের ছবি" style="max-width: 250px; border: 3px solid #000000; border-radius: 10px;">
+    </div>
+    <div class="about-text">
+      <h2 style="color: #f39c12;">কিছু কথা এনামুল হক সম্পর্কে</h2>
+      <p id="about-text" style="overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+        আমার শৈশব ও বেড়ে ওঠা গাইবান্ধা জেলার গোবিন্দগঞ্জ উপজেলার হরিরামপুর ইউনিয়নের ক্রোড়গাছা গ্রামে।শৈশবের  পড়াশুনা হাতেখরি হয় নিজ গ্রামের প্রাথমিক বিদ্যালয়ে।পরবর্তীতে গাইবান্ধা টেকনিক্যাল স্কুল এন্ড কলেজ থেকে এসএসসি এবং বগুড়া পলিটেকনিক ইনস্টিটিউটে মেকানিক্যাল টেকনোলজি নিয়ে ডিপ্লোমা ইন ইঞ্জিনিয়ারিং সম্পন্ন করেছি।বর্তমানে চাকুরির প্রস্তুতির জন্য গাজীপুর অধ্যয়নরত আছি।
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>যোগাযোগ করুন</h2>
-            <p>ফোন: ০১৯৪৩৪৩৬৬৭৬ | ইমেইল: anamul.bpi30@gmail.com</p>
-            <p>ঠিকানা: ক্রোড়গাছা, হরিরামপুর, গোবিন্দগঞ্জ, গাইবান্ধা।</p>
-        </div>
-    </section>
+বাবা এবং মা—এই দুইজনের প্রেরণাতেই আমি সামনে এগিয়ে যাওয়ার সাহস খুঁজে পাই। তাদের ভালোবাসা, ত্যাগ ও জীবনদর্শন আমার জীবনের পাথেয়।
+নিজের সীমাবদ্ধতা স্বীকার করে, নিজেকে প্রতিনিয়ত সংশোধন ও উন্নয়নের মধ্য দিয়ে গড়ে তোলা—এই মানসিকতা নিয়েই আমি জীবন ও ক্যারিয়ারের পথে এগিয়ে চলেছি।
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 এনামুল হক। সর্বস্বত্ব সংরক্ষিত।</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">YouTube</a>
-                <a href="#">LinkedIn</a>
+আমি মধ্যবিত্ত, তাই স্বপ্ন দেখি হিসাব করে।
+প্রয়োজনের আগে চাই না বিলাসিতা।দায়িত্বের ভারে বাঁধা আমার প্রতিটি পদক্ষেপ।অভাব আমাকে কাঁদায়, তবুও আশা ছাড়ি না।আমি মধ্যবিত্ত, আত্মসম্মানই আমার সবচেয়ে বড়।
+      </p>
+      <button onclick="toggleAbout()" style="margin-top: 10px; padding: 8px 15px; border: none; background: #f39c12; color: white; border-radius: 5px; font-weight: bold;">
+        আরও পড়ুন
+      </button>
+      <script>
+        function toggleAbout() {
+          var text = document.getElementById("about-text");
+          var button = event.target;
+          if (text.style.webkitLineClamp === "3") {
+            text.style.webkitLineClamp = "unset";
+            button.innerText = "কম দেখাও";
+          } else {
+            text.style.webkitLineClamp = "3";
+            button.innerText = "আরও পড়ুন";
+          }
+        }
+      </script>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>যোগাযোগ করুন</h2>
+      <p><a href="tel:01943436676">ফোন: ০১৯৪৩৪৩৬৬৭৬</a> | <a href="mailto:anamul.bpi30@gmail.com">ইমেইল: anamul.bpi30@gmail.com</a></p>
+      <p><a href="https://www.google.com/maps?q=ক্রোড়গাছা,+হরিরামপুর,+গোবিন্দগঞ্জ,+গাইবান্ধা" target="_blank">ঠিকানা: ক্রোড়গাছা, হরিরামপুর, গোবিন্দগঞ্জ, গাইবান্ধা।</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© ২০২৫ এনামুল হক। সর্বস্বত্ব সংরক্ষিত।</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/anamul.bpi30" target="_blank">Facebook</a>
+        <a href="https://wa.me/8801522101268" target="_blank">WhatsApp</a>
+        <a  href="https://www.instagram.com/anamul.bpi30" target="_blank">Instagram</a>
             </div>
         </div>
     </footer>
